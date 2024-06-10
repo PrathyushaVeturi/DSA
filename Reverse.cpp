@@ -16,9 +16,16 @@ int main() {
         cin>>arr[i];
     }
     
-    // Reversing the elements => using swap()
-    int i=0; 
-    int j=N-1;
+    // input the part of the array.
+    cout<<"enter the part of the array: ";
+    int l;
+    cin>>l;
+    int r;
+    cin>>r;
+    
+    // Reverse a part of the array => using [l,r]
+    int i=l; 
+    int j=r;
     while(i<=j){
         swap(arr[i],arr[j]);
         i++;
@@ -32,21 +39,25 @@ int main() {
     return 0;
 }
 
-/* Output 1: (for even size of the array)
-Enter the size of the array: 6
-
-Enter 6 elements to be stored in the array: 
-3 7 5 9 2 8
-8 2 9 5 7 3 
-
-=== Code Execution Successful ===
-
-Output 2: (for odd size)
+/*
+Output 1:
 Enter the size of the array: 5
 
 Enter 5 elements to be stored in the array: 
 3 7 5 9 2
-2 9 5 7 3 
+enter the part of the array: 1
+3
+3 9 5 7 2 
+
+=== Code Execution Successful ===
+
+Output 2:
+Enter the size of the array: 5
+
+Enter 5 elements to be stored in the array: 
+3 7 5 9 2
+enter the part of the array: 1 4
+3 2 9 5 7 
 
 === Code Execution Successful ===
 */
